@@ -2,19 +2,17 @@
 
 namespace Clean\Domain\Customer;
 
-use Clean\Domain\Common\RepositoryInterface;
+use Illuminate\Support\Collection;
 
 /**
  * Interface CustomerRepositoryInterface
  *
  * @package Clean\Domain\Customer
  */
-interface CustomerRepositoryInterface extends RepositoryInterface
+interface CustomerRepositoryInterface
 {
     /**
-     * @param CustomerInterface $customer
-     *
-     * @return bool
+     * @return Collection
      */
-    public function add( CustomerInterface $customer ): bool;
+    public function all(): Collection;
 }

@@ -2,27 +2,19 @@
 
 namespace Clean\Persistence\Customer;
 
-use Clean\Domain\Customer\CustomerInterface;
 use Clean\Domain\Customer\CustomerModel;
 use Clean\Domain\Customer\CustomerRepositoryInterface;
-use Clean\Persistence\Common\AbstractRepository;
+use Illuminate\Support\Collection;
 
 /**
  * Class CustomerRepository
  *
  * @package Clean\Persistence\Customer
  */
-class CustomerRepository extends AbstractRepository implements CustomerRepositoryInterface
+class CustomerRepository implements CustomerRepositoryInterface
 {
-    protected $internalModelClass = CustomerModel::class;
-
-    /**
-     * @param CustomerInterface $customer
-     *
-     * @return bool
-     */
-    public function add( CustomerInterface $customer ): bool
+    public function all(): Collection
     {
-        return $customer->getInternalModel()->save();
+        return CustomerModel::all();
     }
 }
