@@ -3,6 +3,7 @@
 namespace Clean\Interfaces\Customer;
 
 use App\Http\Controllers\Controller;
+use Clean\Domain\Customer\CustomerFactory;
 use Clean\Domain\Customer\CustomerModel;
 
 /**
@@ -14,11 +15,12 @@ class CustomerController extends Controller
 {
     public function __invoke()
     {
-        $customerModel = new CustomerModel();
-        $customerModel->name = 'Customer #2';
-//        $customerModel->save();
+        $customerFactory = new CustomerFactory();
+        $customer = $customerFactory->create('Customer #4');
 
-        var_dump( $customerModel );
+//        $customer->save();
+
+        var_dump( $customer );
 
         return view( 'welcome' );
     }
