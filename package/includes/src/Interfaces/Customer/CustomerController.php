@@ -16,12 +16,15 @@ class CustomerController extends Controller
 {
     public function __invoke()
     {
-        $customerFactory = new CustomerFactory();
         $customerRepository = new CustomerRepository();
 
-//        $customer = $customerFactory->create( 'Customer #5' );
+        echo count( $customerRepository->all() );
+        echo '<hr>';
+
+//        $customerFactory = new CustomerFactory();
+//        $customer = $customerFactory->create( 'Customer #6' );
 //        $customerRepository->add( $customer );
-        
+
 //        var_dump( $customer );
 
         return view( 'welcome' );

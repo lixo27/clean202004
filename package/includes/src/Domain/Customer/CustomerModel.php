@@ -2,6 +2,7 @@
 
 namespace Clean\Domain\Customer;
 
+use Clean\Domain\Common\AbstractModel;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,22 +10,15 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package Clean\Domain\Customer
  */
-class CustomerModel extends Model implements CustomerInterface
+class CustomerModel extends AbstractModel implements CustomerInterface
 {
     protected $table = 'customers';
 
-    public function identity(): int
-    {
-        return $this->id;
-    }
-
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
-    }
-
-    public function getInternalModel(): Model
-    {
-        return $this;
     }
 }
