@@ -13,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get( '/', '\Clean\Interfaces\Home\HomeController' )->name( 'clean.home' );
-Route::get( 'customer', '\Clean\Interfaces\Customer\CustomerController' )->name( 'clean.customer' );
+//Route::get('/', function () {
+//    return view('welcome');
+//});

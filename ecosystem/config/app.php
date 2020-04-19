@@ -178,6 +178,7 @@ return [
         /*
          * Clean Application Service Providers...
          */
+        \Clean\Interfaces\Provider\RouteServiceProvider::class,
         \Clean\Application\Provider\CustomerServiceProvider::class,
 
     ],
