@@ -13,9 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get( '/', function () {
-//    return view( 'welcome' );
-//} );
-
-Route::get( '/', '\Clean\Interfaces\Home\HomeController' );
-Route::get( 'customer', '\Clean\Interfaces\Customer\CustomerController' );
+Route::get( '/', '\Clean\Interfaces\Home\HomeController' )->name( 'clean.home' );
+Route::get( 'customer', '\Clean\Interfaces\Customer\CustomerController' )->name( 'clean.customer' );
