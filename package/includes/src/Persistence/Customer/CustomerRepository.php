@@ -1,30 +1,28 @@
 <?php
 
-namespace Clean\Domain\Customer;
+namespace Clean\Persistence\Customer;
 
-use Illuminate\Database\Eloquent\Model;
+use Clean\Domain\Customer\CustomerInterface;
+use Clean\Domain\Customer\CustomerModel;
+use Clean\Domain\Customer\CustomerRepositoryInterface;
+use Illuminate\Support\Collection;
 
 /**
- * Class CustomerModel
+ * Class CustomerRepository
  *
- * @package Clean\Domain\Customer
+ * @package Clean\Persistence\Customer
  */
-class CustomerModel extends Model implements CustomerInterface
+class CustomerRepository implements CustomerRepositoryInterface
 {
-    protected $table = 'customers';
-
-    public function identity(): int
+    public function add( CustomerInterface $customer ): bool
     {
-        return $this->id;
+        $internalModel = $customer->getInternalModel();
+        
+        return $internalModel->save();
     }
 
-    public function getName(): string
+    public function all(): Collection
     {
-        return $this->name;
-    }
-
-    public function getInternalModel(): Model
-    {
-        return $this;
+        return CustomerModel::all();
     }
 }

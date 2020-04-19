@@ -5,6 +5,7 @@ namespace Clean\Interfaces\Customer;
 use App\Http\Controllers\Controller;
 use Clean\Domain\Customer\CustomerFactory;
 use Clean\Domain\Customer\CustomerModel;
+use Clean\Persistence\Customer\CustomerRepository;
 
 /**
  * Class CustomerController
@@ -16,11 +17,12 @@ class CustomerController extends Controller
     public function __invoke()
     {
         $customerFactory = new CustomerFactory();
-        $customer = $customerFactory->create('Customer #4');
+        $customerRepository = new CustomerRepository();
 
-//        $customer->save();
-
-        var_dump( $customer );
+//        $customer = $customerFactory->create( 'Customer #5' );
+//        $customerRepository->add( $customer );
+        
+//        var_dump( $customer );
 
         return view( 'welcome' );
     }

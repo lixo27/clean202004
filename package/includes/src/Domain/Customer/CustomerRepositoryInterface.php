@@ -2,18 +2,19 @@
 
 namespace Clean\Domain\Customer;
 
-use Clean\Domain\Common\EntityInterface;
 use Clean\Domain\Common\RepositoryInterface;
 
 /**
- * Interface CustomerRepository
+ * Interface CustomerRepositoryInterface
  *
  * @package Clean\Domain\Customer
  */
-interface CustomerRepository extends RepositoryInterface
+interface CustomerRepositoryInterface extends RepositoryInterface
 {
     /**
-     * @return string
+     * @param CustomerInterface $customer
+     *
+     * @return bool
      */
-    public function getName(): string;
+    public function add( CustomerInterface $customer ): bool;
 }

@@ -2,7 +2,6 @@
 
 namespace Clean\Domain\Customer;
 
-use Clean\Domain\Common\EntityInterface;
 use Illuminate\Database\Eloquent\Model;
 
 /**
