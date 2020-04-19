@@ -12,6 +12,13 @@ use Illuminate\Support\Collection;
 interface RepositoryInterface
 {
     /**
+     * @param int $identity
+     *
+     * @return EntityInterface
+     */
+    public function get( int $identity ): ?EntityInterface;
+
+    /**
      * @return Collection
      */
     public function all(): Collection;
