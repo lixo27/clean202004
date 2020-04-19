@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package Clean\Domain\Common
  */
-class AbstractModel extends Model implements EntityInterface
+abstract class AbstractModel extends Model implements EntityInterface
 {
     /**
      * @return int

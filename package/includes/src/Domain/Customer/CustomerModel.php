@@ -3,7 +3,6 @@
 namespace Clean\Domain\Customer;
 
 use Clean\Domain\Common\AbstractModel;
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class CustomerModel

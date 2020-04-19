@@ -3,7 +3,6 @@
 namespace Clean\Persistence\Common;
 
 use Clean\Domain\Common\RepositoryInterface;
-use Clean\Domain\Customer\CustomerModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
