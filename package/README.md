@@ -17,3 +17,11 @@ Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante,
 ```bash
 php ecosystem/artisan migrate --path=../package/resources/database/migrations
 ```
+
+### Running Seeders
+
+Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
+
+```bash
+php ecosystem/artisan db:seed
+```
