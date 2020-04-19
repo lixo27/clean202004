@@ -2,6 +2,7 @@
 
 namespace Clean\Application\Customer\Query\GetCustomerList;
 
+use Clean\Domain\Customer\CustomerInterface;
 use Clean\Domain\Customer\CustomerRepositoryInterface;
 use Illuminate\Support\Collection;
 
@@ -32,6 +33,15 @@ class GetCustomerList implements GetCustomerListInterface
      */
     public function execute(): Collection
     {
-        return $this->customerRepsitory->all();
+        $customers = $this->customerRepsitory->all();
+        return $customers->map( function ( CustomerInterface $customer ) {
+
+            $customerModel = new \stdClass();
+            $customerModel->id = $customer->identity();
+            $customerModel->name = $customer->getName();
+
+            return $customerModel;
+            
+        } );
     }
 }
