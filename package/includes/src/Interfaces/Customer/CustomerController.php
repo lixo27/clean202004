@@ -3,8 +3,8 @@
 namespace Clean\Interfaces\Customer;
 
 use App\Http\Controllers\Controller;
-use Clean\Domain\Customer\CustomerInterface;
-use Clean\Persistence\Customer\CustomerRepository;
+use Clean\Domain\Customer\CustomerFactoryInterface;
+use Clean\Domain\Customer\CustomerRepositoryInterface;
 
 /**
  * Class CustomerController
@@ -13,14 +13,33 @@ use Clean\Persistence\Customer\CustomerRepository;
  */
 class CustomerController extends Controller
 {
+    /**
+     * @var CustomerFactoryInterface
+     */
+    private $customerFactory;
+
+    /**
+     * @var CustomerRepositoryInterface
+     */
+    private $customerRepository;
+
+    /**
+     * CustomerController constructor.
+     *
+     * @param CustomerFactoryInterface    $customerFactory
+     * @param CustomerRepositoryInterface $customerRepository
+     */
+    public function __construct(
+        CustomerFactoryInterface $customerFactory,
+        CustomerRepositoryInterface $customerRepository
+    )
+    {
+        $this->customerFactory = $customerFactory;
+        $this->customerRepository = $customerRepository;
+    }
+
     public function __invoke()
     {
-        $customerRepository = new CustomerRepository();
-        $customerRepository->all()->each( function ( CustomerInterface $customer ) {
-            echo $customer->getName();
-            echo '<br>';
-        } );
-
         return view( 'welcome' );
     }
 }
