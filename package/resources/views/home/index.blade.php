@@ -17,13 +17,4 @@
 
     </div>
 
-    <style>
-
-        .starter-template {
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-    </style>
-
 @endsection
