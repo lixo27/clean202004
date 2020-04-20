@@ -2,7 +2,6 @@
 
 namespace Clean\Interfaces\Providers;
 
-
 use Clean\Interfaces\Customers\IndexCustomerController;
 use Clean\Interfaces\Home\IndexHomeController;
 use Illuminate\Support\Facades\Route;

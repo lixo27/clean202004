@@ -2,8 +2,8 @@
 
 namespace Clean\Application\Customers\Queries\GetCustomerList;
 
-use Clean\Domain\Customer\CustomerInterface;
-use Clean\Domain\Customer\CustomerRepositoryInterface;
+use Clean\Domain\Customers\CustomerInterface;
+use Clean\Domain\Customers\CustomerRepositoryInterface;
 use Illuminate\Support\Collection;
 
 /**

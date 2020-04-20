@@ -3,7 +3,7 @@
 namespace Clean\Interfaces\Customers;
 
 use App\Http\Controllers\Controller;
-use Clean\Application\Customer\Query\GetCustomerList\GetCustomerListInterface;
+use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
 
 /**
  * Class IndexCustomerController

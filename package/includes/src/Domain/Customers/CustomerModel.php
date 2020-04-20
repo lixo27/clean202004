@@ -1,13 +1,13 @@
 <?php
 
-namespace Clean\Domain\Customer;
+namespace Clean\Domain\Customers;
 
 use Clean\Domain\Common\AbstractModel;
 
 /**
  * Class CustomerModel
  *
- * @package Clean\Domain\Customer
+ * @package Clean\Domain\Customers
  */
 class CustomerModel extends AbstractModel implements CustomerInterface
 {

@@ -2,9 +2,9 @@
 
 namespace Clean\Interfaces\Providers;
 
-use Clean\Domain\Customer\CustomerFactory;
-use Clean\Domain\Customer\CustomerFactoryInterface;
-use Clean\Domain\Customer\CustomerRepositoryInterface;
+use Clean\Domain\Customers\CustomerFactory;
+use Clean\Domain\Customers\CustomerFactoryInterface;
+use Clean\Domain\Customers\CustomerRepositoryInterface;
 use Clean\Persistence\Customer\CustomerRepository;
 use Illuminate\Support\ServiceProvider;
 

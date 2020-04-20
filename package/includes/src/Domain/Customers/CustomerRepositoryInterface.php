@@ -1,13 +1,13 @@
 <?php
 
-namespace Clean\Domain\Customer;
+namespace Clean\Domain\Customers;
 
 use Illuminate\Support\Collection;
 
 /**
  * Interface CustomerRepositoryInterface
  *
- * @package Clean\Domain\Customer
+ * @package Clean\Domain\Customers
  */
 interface CustomerRepositoryInterface
 {

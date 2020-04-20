@@ -2,8 +2,8 @@
 
 namespace Clean\Persistence\Customer;
 
-use Clean\Domain\Customer\CustomerModel;
-use Clean\Domain\Customer\CustomerRepositoryInterface;
+use Clean\Domain\Customers\CustomerModel;
+use Clean\Domain\Customers\CustomerRepositoryInterface;
 use Illuminate\Support\Collection;
 
 /**

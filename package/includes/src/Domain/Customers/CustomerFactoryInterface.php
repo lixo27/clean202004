@@ -1,11 +1,11 @@
 <?php
 
-namespace Clean\Domain\Customer;
+namespace Clean\Domain\Customers;
 
 /**
  * Interface CustomerFactoryInterface
  *
- * @package Clean\Domain\Customer
+ * @package Clean\Domain\Customers
  */
 interface CustomerFactoryInterface
 {

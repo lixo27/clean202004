@@ -1,13 +1,13 @@
 <?php
 
-namespace Clean\Domain\Customer;
+namespace Clean\Domain\Customers;
 
 use Clean\Domain\Common\EntityInterface;
 
 /**
  * Interface CustomerInterface
  *
- * @package Clean\Domain\Customer
+ * @package Clean\Domain\Customers
  */
 interface CustomerInterface extends EntityInterface
 {
