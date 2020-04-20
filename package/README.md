@@ -7,7 +7,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lectus vive
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php ecosystem/artisan make:migration --path=../package/resources/database/migrations create_customers_table
+php ecosystem/artisan make:migration --path=../package/database/migrations create_customers_table
 ```
 
 ### Running Migrations
@@ -15,7 +15,7 @@ php ecosystem/artisan make:migration --path=../package/resources/database/migrat
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php ecosystem/artisan migrate --path=../package/resources/database/migrations
+php ecosystem/artisan migrate --path=../package/database/migrations
 ```
 
 ### Running Seeders

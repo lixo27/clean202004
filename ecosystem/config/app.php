@@ -179,6 +179,7 @@ return [
          * Clean Application Service Providers...
          */
         \Clean\Interfaces\Providers\ApplicationServiceProvider::class,
+        \Clean\Interfaces\Providers\DatabaseServiceProvider::class,
         \Clean\Interfaces\Providers\DomainServiceProvider::class,
         \Clean\Interfaces\Providers\RouteServiceProvider::class,
 
