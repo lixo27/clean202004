@@ -29,6 +29,10 @@ class CustomerController extends Controller
 
     public function __invoke()
     {
-        return view( 'welcome' );
+        $customers = $this->customerList->execute();
+
+        return view( 'customer.index', [
+            'customers' => [],
+        ] );
     }
 }

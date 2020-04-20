@@ -13,7 +13,7 @@
                 <a class="nav-link" href="{{ route('clean.home') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('clean.customer') }}">Customer</a>
+                <a class="nav-link" href="{{ route('clean.customer') }}">Customers</a>
             </li>
         </ul>
 
