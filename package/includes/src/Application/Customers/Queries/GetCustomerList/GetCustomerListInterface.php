@@ -1,13 +1,13 @@
 <?php
 
-namespace Clean\Application\Customer\Query\GetCustomerList;
+namespace Clean\Application\Customers\Queries\GetCustomerList;
 
 use Illuminate\Support\Collection;
 
 /**
  * Interface GetCustomerListInterface
  *
- * @package Clean\Application\Customer\Query\GetCustomerList
+ * @package Clean\Application\Customers\Queries\GetCustomerList
  */
 interface GetCustomerListInterface
 {

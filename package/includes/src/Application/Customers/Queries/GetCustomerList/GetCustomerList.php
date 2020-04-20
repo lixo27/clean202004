@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Application\Customer\Query\GetCustomerList;
+namespace Clean\Application\Customers\Queries\GetCustomerList;
 
 use Clean\Domain\Customer\CustomerInterface;
 use Clean\Domain\Customer\CustomerRepositoryInterface;
@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
 /**
  * Class GetCustomerList
  *
- * @package Clean\Application\Customer\Query\GetCustomerList
+ * @package Clean\Application\Customers\Queries\GetCustomerList
  */
 class GetCustomerList implements GetCustomerListInterface
 {
@@ -41,7 +41,7 @@ class GetCustomerList implements GetCustomerListInterface
             $customerModel->name = $customer->getName();
 
             return $customerModel;
-            
+
         } );
     }
 }

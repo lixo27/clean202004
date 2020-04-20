@@ -2,8 +2,8 @@
 
 namespace Clean\Interfaces\Providers;
 
-use Clean\Application\Customer\Query\GetCustomerList\GetCustomerList;
-use Clean\Application\Customer\Query\GetCustomerList\GetCustomerListInterface;
+use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerList;
+use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
 use Illuminate\Support\ServiceProvider;
 
 /**
