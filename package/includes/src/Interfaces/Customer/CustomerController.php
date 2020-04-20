@@ -32,7 +32,7 @@ class CustomerController extends Controller
         $customers = $this->customerList->execute();
 
         return view( 'customer.index', [
-            'customers' => [],
+            'customers' => $customers,
         ] );
     }
 }

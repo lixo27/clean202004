@@ -14,7 +14,7 @@
 </head>
 <body>
 
-@include('layouts.navigation')
+@include('site.navigation.navigation')
 
 <main role="main" class="container">
 
