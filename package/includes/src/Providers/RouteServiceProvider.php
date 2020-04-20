@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Interfaces\Providers;
+namespace Clean\Providers;
 
 use Clean\Interfaces\Customers\IndexCustomerController;
 use Clean\Interfaces\Home\IndexHomeController;
@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class RouteServiceProvider
  *
- * @package Clean\Interfaces\Providers
+ * @package Clean\Providers
  */
 class RouteServiceProvider extends ServiceProvider
 {

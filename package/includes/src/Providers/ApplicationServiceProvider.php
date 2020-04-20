@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Interfaces\Providers;
+namespace Clean\Providers;
 
 use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerList;
 use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class ApplicationServiceProvider
  *
- * @package Clean\Interfaces\Providers
+ * @package Clean\Providers
  */
 class ApplicationServiceProvider extends ServiceProvider
 {

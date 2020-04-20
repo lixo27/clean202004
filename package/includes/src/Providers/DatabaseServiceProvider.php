@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Interfaces\Providers;
+namespace Clean\Providers;
 
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\ServiceProvider;
@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class DatabaseServiceProvider
  *
- * @package Clean\Interfaces\Providers
+ * @package Clean\Providers
  */
 class DatabaseServiceProvider extends ServiceProvider
 {

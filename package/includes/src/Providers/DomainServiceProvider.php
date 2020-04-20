@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Interfaces\Providers;
+namespace Clean\Providers;
 
 use Clean\Domain\Customers\CustomerFactory;
 use Clean\Domain\Customers\CustomerFactoryInterface;
@@ -11,7 +11,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class DomainServiceProvider
  *
- * @package Clean\Interfaces\Providers
+ * @package Clean\Providers
  */
 class DomainServiceProvider extends ServiceProvider
 {
