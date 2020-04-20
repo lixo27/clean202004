@@ -5,11 +5,11 @@ namespace Clean\Interfaces\Home;
 use App\Http\Controllers\Controller;
 
 /**
- * Class HomeController
+ * Class IndexHomeController
  *
  * @package Clean\Interfaces\Home
  */
-class HomeController extends Controller
+class IndexHomeController extends Controller
 {
     public function __invoke()
     {

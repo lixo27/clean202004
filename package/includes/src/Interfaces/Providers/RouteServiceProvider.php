@@ -2,8 +2,9 @@
 
 namespace Clean\Interfaces\Providers;
 
-use Clean\Interfaces\Customer\CustomerController;
-use Clean\Interfaces\Home\HomeController;
+
+use Clean\Interfaces\Customers\IndexCustomerController;
+use Clean\Interfaces\Home\IndexHomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,8 +19,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::name( 'clean.' )->group( function () {
 
-            Route::get( '/', HomeController::class )->name( 'home' );
-            Route::get( 'customer', CustomerController::class )->name( 'customer' );
+            Route::get( '/', IndexHomeController::class )->name( 'home.index' );
+            Route::get( 'customers', IndexCustomerController::class )->name( 'customer.index' );
 
         } );
     }

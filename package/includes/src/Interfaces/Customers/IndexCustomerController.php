@@ -1,16 +1,16 @@
 <?php
 
-namespace Clean\Interfaces\Customer;
+namespace Clean\Interfaces\Customers;
 
 use App\Http\Controllers\Controller;
 use Clean\Application\Customer\Query\GetCustomerList\GetCustomerListInterface;
 
 /**
- * Class CustomerController
+ * Class IndexCustomerController
  *
- * @package Clean\Interfaces\Customer
+ * @package Clean\Interfaces\Customers
  */
-class CustomerController extends Controller
+class IndexCustomerController extends Controller
 {
     /**
      * @var GetCustomerListInterface
