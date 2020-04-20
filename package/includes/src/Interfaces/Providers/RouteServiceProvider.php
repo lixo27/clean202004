@@ -1,16 +1,16 @@
 <?php
 
-namespace Clean\Interfaces\Provider;
+namespace Clean\Interfaces\Providers;
 
-use Carbon\Laravel\ServiceProvider;
 use Clean\Interfaces\Customer\CustomerController;
 use Clean\Interfaces\Home\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class RouteServiceProvider
  *
- * @package Clean\Interfaces\Provider
+ * @package Clean\Interfaces\Providers
  */
 class RouteServiceProvider extends ServiceProvider
 {
