@@ -4,6 +4,7 @@ namespace Clean\Providers;
 
 use Clean\Interfaces\Customers\IndexCustomerController;
 use Clean\Interfaces\Employees\IndexEmployeeController;
+use Clean\Interfaces\Products\IndexProductController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +23,10 @@ class RouteServiceProvider extends ServiceProvider
 
         Route::name( 'employee.' )->group( function () {
             Route::get( 'employees', IndexEmployeeController::class )->name( 'index' );
+        } );
+
+        Route::name( 'product.' )->group( function () {
+            Route::get( 'products', IndexProductController::class )->name( 'index' );
         } );
     }
 }

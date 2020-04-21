@@ -31,7 +31,7 @@
         @empty
 
             <tr>
-                <td colspan="2">Sorry, no products</td>
+                <td colspan="3">Sorry, no products</td>
             </tr>
 
         @endforelse

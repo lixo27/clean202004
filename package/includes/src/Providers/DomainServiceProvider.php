@@ -8,8 +8,12 @@ use Clean\Domain\Customers\CustomerRepositoryInterface;
 use Clean\Domain\Employees\EmployeeFactory;
 use Clean\Domain\Employees\EmployeeFactoryInterface;
 use Clean\Domain\Employees\EmployeeRepositoryInterface;
+use Clean\Domain\Products\ProductFactory;
+use Clean\Domain\Products\ProductFactoryInterface;
+use Clean\Domain\Products\ProductRepositoryInterface;
 use Clean\Persistence\Customers\CustomerRepository;
 use Clean\Persistence\Employees\EmployeeRepository;
+use Clean\Persistence\Products\ProductRepository;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -24,5 +28,7 @@ class DomainServiceProvider extends ServiceProvider
         CustomerRepositoryInterface::class => CustomerRepository::class,
         EmployeeFactoryInterface::class => EmployeeFactory::class,
         EmployeeRepositoryInterface::class => EmployeeRepository::class,
+        ProductFactoryInterface::class => ProductFactory::class,
+        ProductRepositoryInterface::class => ProductRepository::class,
     ];
 }
