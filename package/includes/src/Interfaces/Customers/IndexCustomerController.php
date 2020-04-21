@@ -2,8 +2,8 @@
 
 namespace Clean\Interfaces\Customers;
 
-use App\Http\Controllers\Controller;
 use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
+use Illuminate\Routing\Controller;
 
 /**
  * Class IndexCustomerController
