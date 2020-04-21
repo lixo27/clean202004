@@ -11,6 +11,11 @@ use Illuminate\Support\ServiceProvider;
  */
 class CleanServiceProvider extends ServiceProvider
 {
+    public function boot()
+    {
+        $this->loadFactoriesFrom( dirname( __DIR__, 3 ) . '/database/factories' );
+    }
+
     public function register()
     {
         $this->registerResources();
