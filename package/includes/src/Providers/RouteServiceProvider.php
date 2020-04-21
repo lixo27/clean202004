@@ -15,10 +15,8 @@ class RouteServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Route::name( 'clean.' )->group( function () {
-
-            Route::get( 'customers', IndexCustomerController::class )->name( 'customer.index' );
-
+        Route::name( 'customer.' )->group( function () {
+            Route::get( 'customers', IndexCustomerController::class )->name( 'index' );
         } );
     }
 }

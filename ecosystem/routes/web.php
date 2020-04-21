@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get( '/', 'Home\IndexHomeController' )->name( 'home.index' );
+Route::name( 'home.' )->group( function () {
+    Route::get( '/', 'Home\IndexHomeController' )->name( 'index' );
+} );
