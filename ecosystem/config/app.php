@@ -178,10 +178,10 @@ return [
         /*
          * Clean Service Providers...
          */
+        \Clean\Providers\Common\DatabaseServiceProvider::class,
         \Clean\Providers\Customers\CustomerServiceProvider::class,
         \Clean\Providers\Employees\EmployeeServiceProvider::class,
         \Clean\Providers\Products\ProductServiceProvider::class,
-        \Clean\Providers\DatabaseServiceProvider::class,
 
     ],
 
