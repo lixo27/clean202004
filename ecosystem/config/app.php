@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
-         * Clean Application Service Providers...
+         * Clean Service Providers...
          */
         \Clean\Providers\ApplicationServiceProvider::class,
         \Clean\Providers\DatabaseServiceProvider::class,

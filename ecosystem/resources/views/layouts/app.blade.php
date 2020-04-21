@@ -17,7 +17,7 @@
 </head>
 <body>
 
-@include('site.navigation.navigation')
+@include('navbars.primary')
 
 <main role="main" class="container">
 
