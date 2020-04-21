@@ -3,6 +3,7 @@
 namespace Clean\Providers;
 
 use Clean\Interfaces\Customers\IndexCustomerController;
+use Clean\Interfaces\Employees\IndexEmployeeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -17,6 +18,10 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::name( 'customer.' )->group( function () {
             Route::get( 'customers', IndexCustomerController::class )->name( 'index' );
+        } );
+
+        Route::name( 'employee.' )->group( function () {
+            Route::get( 'employees', IndexEmployeeController::class )->name( 'index' );
         } );
     }
 }
