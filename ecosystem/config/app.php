@@ -175,14 +175,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        /*
-         * Clean Service Providers...
-         */
-        \Clean\Providers\Customers\CustomerServiceProvider::class,
-        \Clean\Providers\Employees\EmployeeServiceProvider::class,
-        \Clean\Providers\Products\ProductServiceProvider::class,
-        \Clean\Providers\CleanServiceProvider::class,
-
     ],
 
     /*

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6558f74828bca9ebecac73d90cea4b1a",
+    "content-hash": "f68470f9f7ec219bba8bc19e264157c3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1061,6 +1061,59 @@
                 "storage"
             ],
             "time": "2020-04-16T13:21:26+00:00"
+        },
+        {
+            "name": "lixo27/clean202004",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "../package",
+                "reference": "9eab3ab7a7dfce765afb13e2ba8693d05e28b239"
+            },
+            "require": {
+                "laravel/framework": "^7.0",
+                "php": "^7.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Clean\\Providers\\Customers\\CustomerServiceProvider",
+                        "Clean\\Providers\\Employees\\EmployeeServiceProvider",
+                        "Clean\\Providers\\Products\\ProductServiceProvider",
+                        "Clean\\Providers\\CleanServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Clean\\": "includes/src/"
+                },
+                "classmap": [
+                    "database/seeds",
+                    "database/factories"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thiago Senna",
+                    "email": "thiago@thremes.com.br"
+                }
+            ],
+            "description": "Use this project as a way to quickly start any new project.",
+            "keywords": [
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/lixo27/clean202004/issues",
+                "source": "https://github.com/lixo27/clean202004"
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "monolog/monolog",
@@ -5544,7 +5597,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "lixo27/clean202004": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
