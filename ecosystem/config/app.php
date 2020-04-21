@@ -182,6 +182,7 @@ return [
         \Clean\Providers\Customers\CustomerServiceProvider::class,
         \Clean\Providers\Employees\EmployeeServiceProvider::class,
         \Clean\Providers\Products\ProductServiceProvider::class,
+        \Clean\Providers\CleanServiceProvider::class,
 
     ],
 

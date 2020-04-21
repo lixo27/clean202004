@@ -14,8 +14,7 @@ return [
     */
 
     'paths' => [
-        resource_path( 'views' ),
-        dirname( base_path() ) . '/package/resources/views',
+        resource_path( 'views' )
     ],
 
     /*

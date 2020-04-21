@@ -32,7 +32,7 @@ class IndexProductController extends Controller
     {
         $products = $this->productList->execute();
 
-        return view( 'product.index', [
+        return view( 'clean::product.index', [
             'products' => $products,
         ] );
     }

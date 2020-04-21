@@ -31,7 +31,7 @@ class IndexCustomerController extends Controller
     {
         $customers = $this->customerList->execute();
 
-        return view( 'customer.index', [
+        return view( 'clean::customer.index', [
             'customers' => $customers,
         ] );
     }

@@ -31,7 +31,7 @@ class IndexEmployeeController extends Controller
     {
         $employees = $this->employeeList->execute();
 
-        return view( 'employee.index', [
+        return view( 'clean::employee.index', [
             'employees' => $employees,
         ] );
     }
