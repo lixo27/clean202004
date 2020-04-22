@@ -1,5 +1,7 @@
 <?php
 
+namespace Clean;
+
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 $factory->define(
@@ -8,7 +10,7 @@ $factory->define(
         return [
             'created_at' => now(),
             'updated_at' => now()->addDay(),
-            'name' => rtrim( $faker->sentence( 4 ), '.' ),
+            'name' => rtrim( $faker->sentence( 3 ), '.' ),
             'price' => $faker->randomFloat( 2, 10, 99 ),
         ];
     }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Clean;
+
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 $factory->define(

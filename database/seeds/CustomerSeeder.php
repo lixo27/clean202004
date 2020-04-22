@@ -1,5 +1,7 @@
 <?php
 
+namespace Clean;
+
 use Illuminate\Database\Seeder;
 
 /**

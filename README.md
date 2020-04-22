@@ -34,9 +34,9 @@ php artisan migrate
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php artisan db:seed --class=CustomerSeeder
-php artisan db:seed --class=EmployeeSeeder
-php artisan db:seed --class=ProductSeeder
+php artisan db:seed --class=Clean\\CustomerSeeder
+php artisan db:seed --class=Clean\\EmployeeSeeder
+php artisan db:seed --class=Clean\\ProductSeeder
 ```
 
 ### Public Assets
