@@ -2,6 +2,7 @@
 
 namespace Clean;
 
+use Clean\Domain\Products\ProductModel;
 use Illuminate\Database\Seeder;
 
 /**
@@ -11,6 +12,6 @@ class ProductSeeder extends Seeder
 {
     public function run(): void
     {
-        factory( \Clean\Domain\Products\ProductModel::class, 4 )->create();
+        factory( ProductModel::class, 2 )->create();
     }
 }

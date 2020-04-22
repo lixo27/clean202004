@@ -2,6 +2,7 @@
 
 namespace Clean;
 
+use Clean\Domain\Employees\EmployeeModel;
 use Illuminate\Database\Seeder;
 
 /**
@@ -11,6 +12,6 @@ class EmployeeSeeder extends Seeder
 {
     public function run(): void
     {
-        factory( \Clean\Domain\Employees\EmployeeModel::class, 10 )->create();
+        factory( EmployeeModel::class, 5 )->create();
     }
 }
