@@ -17,7 +17,7 @@
 </head>
 <body>
 
-@include('navbars.primary')
+@include('clean::layouts.navbars.primary')
 
 <main role="main" class="container">
 

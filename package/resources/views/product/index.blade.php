@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('clean::layouts.main')
 
 @section('title', 'Products')
 
