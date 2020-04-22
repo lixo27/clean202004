@@ -7,9 +7,7 @@ use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface
 use Clean\Domain\Customers\CustomerFactory;
 use Clean\Domain\Customers\CustomerFactoryInterface;
 use Clean\Domain\Customers\CustomerRepositoryInterface;
-use Clean\Interfaces\Customers\IndexCustomerController;
 use Clean\Persistence\Customers\CustomerRepository;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -24,11 +22,4 @@ class CustomerServiceProvider extends ServiceProvider
         CustomerFactoryInterface::class => CustomerFactory::class,
         CustomerRepositoryInterface::class => CustomerRepository::class,
     ];
-
-    public function boot()
-    {
-        Route::name( 'customer.' )->group( function () {
-            Route::get( 'customers', IndexCustomerController::class )->name( 'index' );
-        } );
-    }
 }
