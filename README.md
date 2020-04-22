@@ -2,7 +2,7 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lectus viverra, laoreet mauris vehicula, congue diam. Maecenas pretium lectus ac dui aliquam, id convallis ex consequat. Nam eu porta est. 
 
-### Installation
+### Hosting as your own repository
 
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
@@ -10,10 +10,12 @@ Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante,
 "repositories": [
     {
         "type": "path",
-           "url": "/develop/homestead/projects/clean202004"
+        "url": "/develop/homestead/projects/clean202004"
     }
 ]
 ```
+
+### Installation
 
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
