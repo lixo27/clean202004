@@ -1,13 +1,24 @@
-## About Migrations
+## Clean Starter Package
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lectus viverra, laoreet mauris vehicula, congue diam. Maecenas pretium lectus ac dui aliquam, id convallis ex consequat. Nam eu porta est. 
 
-### Generating Migrations
+### Installation
+
+Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
+
+```
+"repositories": [
+    {
+        "type": "path",
+           "url": "/develop/homestead/projects/clean202004"
+    }
+]
+```
 
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php ecosystem/artisan make:migration --path=../package/database/migrations create_customers_table
+composer require lixo27/clean202004
 ```
 
 ### Running Migrations
@@ -15,7 +26,7 @@ php ecosystem/artisan make:migration --path=../package/database/migrations creat
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php ecosystem/artisan migrate --path=../package/database/migrations
+php artisan migrate
 ```
 
 ### Running Seeders
@@ -23,5 +34,15 @@ php ecosystem/artisan migrate --path=../package/database/migrations
 Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
 
 ```bash
-php ecosystem/artisan db:seed
+php artisan db:seed --class=CustomerSeeder
+php artisan db:seed --class=EmployeeSeeder
+php artisan db:seed --class=ProductSeeder
+```
+
+### Public Assets
+
+Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante, eget dictum ipsum facilisis eget.
+
+```bash
+php artisan vendor:publish --tag=clean-public
 ```

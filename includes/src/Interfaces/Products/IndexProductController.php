@@ -2,7 +2,6 @@
 
 namespace Clean\Interfaces\Products;
 
-use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
 use Clean\Application\Products\Queries\GetProductList\GetProductListInterface;
 use Illuminate\Routing\Controller;
 
