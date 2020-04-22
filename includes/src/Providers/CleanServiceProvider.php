@@ -15,8 +15,8 @@ class CleanServiceProvider extends ServiceProvider
     {
         $this->loadFactoriesFrom( dirname( __DIR__, 3 ) . '/database/factories' );
         $this->loadMigrationsFrom( dirname( __DIR__, 3 ) . '/database/migrations' );
-        $this->loadViewsFrom( dirname( __DIR__, 3 ) . '/resources/views', 'clean' );
         $this->loadRoutesFrom( dirname( __DIR__, 3 ) . '/routes/web.php' );
+        $this->loadViewsFrom( dirname( __DIR__, 3 ) . '/resources/views', 'clean' );
 
         $this->publishes( [
             dirname( __DIR__, 3 ) . '/resources/css' => public_path( 'vendor/clean/css' ),
