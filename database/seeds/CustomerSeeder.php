@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 
 /**
  * Class CustomerSeeder
+ *
+ * @package Clean
  */
 class CustomerSeeder extends Seeder
 {
