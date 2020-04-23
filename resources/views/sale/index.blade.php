@@ -25,11 +25,11 @@
         @forelse ($sales as $sale)
 
             <tr>
-                <td>{{ $sale->id }}</td>
+                <td><a href="{{ route('sale.detail', ['id' => $sale->id]) }}">{{ $sale->id }}</a></td>
                 <td>{{ $sale->customerName }}</td>
                 <td>{{ $sale->employeeName }}</td>
                 <td>{{ $sale->productName }}</td>
-                <td>{{ money_format('%.2n', $sale->total )}}</td>
+                <td>{{ money_format('%.2n', $sale->total ) }}</td>
             </tr>
 
         @empty
