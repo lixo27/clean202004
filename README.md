@@ -39,6 +39,7 @@ Aenean a scelerisque erat, vel interdum mauris. Praesent ultrices placerat ante,
 php artisan db:seed --class=Clean\\CustomerSeeder
 php artisan db:seed --class=Clean\\EmployeeSeeder
 php artisan db:seed --class=Clean\\ProductSeeder
+php artisan db:seed --class=Clean\\SaleSeeder
 ```
 
 ### Public Assets
