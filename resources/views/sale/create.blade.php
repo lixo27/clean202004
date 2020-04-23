@@ -14,7 +14,7 @@
                 <select id="customerId" name="customerId" class="custom-select" required>
                     <option value="" selected>Choose...</option>
                     @foreach ($saleViewModel->customers as $customer)
-                        <option value="{{ $customer->id }}">{{ $customer->name }}</option>
+                        <option value="{{ $customer->value }}">{{ $customer->text }}</option>
                     @endforeach
                 </select>
             </div>
@@ -26,28 +26,28 @@
                 <select id="employeeId" name="employeeId" class="custom-select" required>
                     <option value="" selected>Choose...</option>
                     @foreach ($saleViewModel->employees as $employee)
-                        <option value="{{ $employee->id }}">{{ $employee->name }}</option>
+                        <option value="{{ $employee->value }}">{{ $employee->text }}</option>
                     @endforeach
                 </select>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="customerId" class="col-sm-2 col-form-label">Product</label>
+            <label for="productId" class="col-sm-2 col-form-label">Product</label>
             <div class="col-sm-10">
                 <select id="productId" name="productId" class="custom-select" required>
                     <option value="" selected>Choose...</option>
                     @foreach ($saleViewModel->products as $product)
-                        <option value="{{ $product->id }}">{{ $product->name }} - {{ money_format('%.2n', $product->price ) }}</option>
+                        <option value="{{ $product->value }}">{{ $product->text }}</option>
                     @endforeach
                 </select>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="quantity" class="col-sm-2 col-form-label">Product</label>
+            <label for="quantity" class="col-sm-2 col-form-label">Quantity</label>
             <div class="col-sm-10">
-                <input type="number" name="quantity" class="form-control" value="{{ $saleViewModel->sale->quantity }}" required>
+                <input type="number" name="quantity" id="quantity" class="form-control" value="{{ $saleViewModel->sale->quantity }}" required>
             </div>
         </div>
 

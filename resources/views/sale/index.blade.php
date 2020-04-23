@@ -47,7 +47,7 @@
     </table>
 
     <div class="text-right">
-        <a class="btn btn-primary" href="{{ route('sale.create') }}">Create</a>
+        <a class="btn btn-primary" href="{{ route('sale.create') }}">Create Sale</a>
     </div>
 
 @endsection

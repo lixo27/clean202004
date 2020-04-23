@@ -11,6 +11,8 @@ use Clean\Application\Sales\Queries\GetSaleList\GetSaleListInterface;
 use Clean\Domain\Sales\SaleFactory;
 use Clean\Domain\Sales\SaleFactoryInterface;
 use Clean\Domain\Sales\SaleRepositoryInterface;
+use Clean\Interfaces\Sales\Models\CreateSaleViewModelFactory;
+use Clean\Interfaces\Sales\Models\CreateSaleViewModelFactoryInterface;
 use Clean\Persistence\Sales\SaleRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,6 +28,7 @@ class SaleServiceProvider extends ServiceProvider
         GetSaleDetailInterface::class => GetSaleDetail::class,
         GetSaleListInterface::class => GetSaleList::class,
         SaleFactoryInterface::class => SaleFactory::class,
+        CreateSaleViewModelFactoryInterface::class => CreateSaleViewModelFactory::class,
         SaleRepositoryInterface::class => SaleRepository::class,
     ];
 }

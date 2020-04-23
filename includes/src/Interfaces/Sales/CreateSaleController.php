@@ -5,6 +5,7 @@ namespace Clean\Interfaces\Sales;
 use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
 use Clean\Application\Employees\Queries\GetEmployeeList\GetEmployeeListInterface;
 use Clean\Application\Products\Queries\GetProductList\GetProductListInterface;
+use Clean\Interfaces\Sales\Models\CreateSaleViewModelFactoryInterface;
 use Illuminate\Routing\Controller;
 
 /**
@@ -15,45 +16,24 @@ use Illuminate\Routing\Controller;
 class CreateSaleController extends Controller
 {
     /**
-     * @var GetCustomerListInterface
+     * @var CreateSaleViewModelFactoryInterface
      */
-    private $customerList;
-
-    /**
-     * @var GetEmployeeListInterface
-     */
-    private $employeeList;
-
-    /**
-     * @var GetProductListInterface
-     */
-    private $productList;
+    private $createSaleViewModelFactory;
 
     /**
      * CreateSaleController constructor.
      *
-     * @param GetCustomerListInterface $customerList
-     * @param GetEmployeeListInterface $employeeList
-     * @param GetProductListInterface  $productList
+     * @param CreateSaleViewModelFactoryInterface $createSaleViewModelFactory
      */
-    public function __construct(
-        GetCustomerListInterface $customerList,
-        GetEmployeeListInterface $employeeList,
-        GetProductListInterface $productList
-    )
+    public function __construct( CreateSaleViewModelFactoryInterface $createSaleViewModelFactory )
     {
-        $this->customerList = $customerList;
-        $this->employeeList = $employeeList;
-        $this->productList = $productList;
+        $this->createSaleViewModelFactory = $createSaleViewModelFactory;
     }
 
     public function __invoke()
     {
-        $saleViewModel = new \stdClass();
-        $saleViewModel->customers = $this->customerList->execute();
-        $saleViewModel->employees = $this->employeeList->execute();
-        $saleViewModel->products = $this->productList->execute();
-
+        $saleViewModel = $this->createSaleViewModelFactory->create();
+        
         $saleViewModel->sale = new \stdClass();
         $saleViewModel->sale->customerId = null;
         $saleViewModel->sale->employeeId = null;
