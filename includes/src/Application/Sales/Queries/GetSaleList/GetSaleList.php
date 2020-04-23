@@ -2,8 +2,6 @@
 
 namespace Clean\Application\Sales\Queries\GetSaleList;
 
-use Clean\Domain\Products\ProductInterface;
-use Clean\Domain\Products\ProductRepositoryInterface;
 use Clean\Domain\Sales\SaleInterface;
 use Clean\Domain\Sales\SaleRepositoryInterface;
 use Illuminate\Support\Collection;

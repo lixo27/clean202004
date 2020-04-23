@@ -37,6 +37,7 @@
         "Clean\\Providers\\Customers\\CustomerServiceProvider",
         "Clean\\Providers\\Employees\\EmployeeServiceProvider",
         "Clean\\Providers\\Products\\ProductServiceProvider",
+        "Clean\\Providers\\Sales\\SaleServiceProvider",
         "Clean\\Providers\\CleanServiceProvider"
       ]
     }

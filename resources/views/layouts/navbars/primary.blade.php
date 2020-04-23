@@ -18,6 +18,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('product.index') }}">Products</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('sale.index') }}">Sales</a>
+            </li>
         </ul>
 
     </div>
