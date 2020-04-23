@@ -10,7 +10,7 @@ namespace Clean\Interfaces\Sales\Models;
 interface CreateSaleViewModelFactoryInterface
 {
     /**
-     * @return \stdClass
+     * @return CreateSaleViewModel
      */
-    public function create(): \stdClass;
+    public function create(): CreateSaleViewModel;
 }

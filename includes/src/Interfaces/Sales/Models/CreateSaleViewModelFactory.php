@@ -48,41 +48,40 @@ class CreateSaleViewModelFactory implements CreateSaleViewModelFactoryInterface
     }
 
     /**
-     * @return \stdClass
+     * @return CreateSaleViewModel
      */
-    public function create(): \stdClass
+    public function create(): CreateSaleViewModel
     {
-        $viewModel = new \stdClass();
-
         $customers = $this->productList->execute();
         $employees = $this->employeeList->execute();
         $products = $this->productList->execute();
 
-        $viewModel->customers = $customers->map( function ( $customer ) {
-            $customerModel = new \stdClass();
-            $customerModel->value = $customer->id;
-            $customerModel->text = $customer->name;
+        $viewModel = new CreateSaleViewModel();
+        $viewModel->sale = new CreateSaleModel();
 
-            return $customerModel;
+        $viewModel->customers = $customers->map( function ( $customer ) {
+            return (object)[
+                'value' => $customer->id,
+                'text' => $customer->name,
+            ];
         } );
 
         $viewModel->employees = $employees->map( function ( $employee ) {
-            $employeeModel = new \stdClass();
-            $employeeModel->value = $employee->id;
-            $employeeModel->text = $employee->name;
-
-            return $employeeModel;
+            return (object)[
+                'value' => $employee->id,
+                'text' => $employee->name,
+            ];
         } );
 
         $viewModel->products = $products->map( function ( $product ) {
-            $productModel = new \stdClass();
-            $productModel->value = $product->id;
-            $productModel->text = sprintf( '%1$s (%2$s)', $product->name, money_format( '%.2n', $product->price ) );
-
-            return $productModel;
+            return (object)[
+                'value' => $product->id,
+                'text' => vsprintf( '%1$s (%2$s)', [
+                    $product->name,
+                    money_format( '%.2n', $product->price ),
+                ] ),
+            ];
         } );
-
-        $viewModel->sale = new CreateSaleModel();
 
         return $viewModel;
     }
