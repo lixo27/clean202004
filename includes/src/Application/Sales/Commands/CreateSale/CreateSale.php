@@ -73,9 +73,10 @@ class CreateSale implements CreateSaleInterface
         $customer = $this->customerRepository->get( $model->customerId );
         $employee = $this->employeeRepository->get( $model->employeeId );
         $product = $this->productRepository->get( $model->productId );
-        $totalPrice = new TotalPrice( $model->unitPrice, $model->quantity );
 
+        $totalPrice = new TotalPrice( $product->getPrice(), $model->quantity );
         $sale = $this->saleFactory->create( $customer, $employee, $product, $totalPrice );
+
         $this->saleRepository->add( $sale );
     }
 }
