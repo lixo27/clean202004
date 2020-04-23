@@ -10,7 +10,7 @@ namespace Clean\Application\Sales\Commands\CreateSale;
 interface CreateSaleInterface
 {
     /**
-     * @param \stdClass $model
+     * @param CreateSaleModel $model
      */
-    public function execute( \stdClass $model ): void;
+    public function execute( CreateSaleModel $model ): void;
 }

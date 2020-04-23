@@ -5,6 +5,7 @@ namespace Clean\Interfaces\Sales\Models;
 use Clean\Application\Customers\Queries\GetCustomerList\GetCustomerListInterface;
 use Clean\Application\Employees\Queries\GetEmployeeList\GetEmployeeListInterface;
 use Clean\Application\Products\Queries\GetProductList\GetProductListInterface;
+use Clean\Application\Sales\Commands\CreateSale\CreateSaleModel;
 
 /**
  * Class CreateSaleViewModelFactory
@@ -80,6 +81,8 @@ class CreateSaleViewModelFactory implements CreateSaleViewModelFactoryInterface
 
             return $productModel;
         } );
+
+        $viewModel->sale = new CreateSaleModel();
 
         return $viewModel;
     }

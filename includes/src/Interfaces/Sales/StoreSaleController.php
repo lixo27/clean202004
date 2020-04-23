@@ -3,6 +3,7 @@
 namespace Clean\Interfaces\Sales;
 
 use Clean\Application\Sales\Commands\CreateSale\CreateSaleInterface;
+use Clean\Application\Sales\Commands\CreateSale\CreateSaleModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -30,7 +31,7 @@ class StoreSaleController extends Controller
 
     public function __invoke( Request $request )
     {
-        $saleModel = new \stdClass();
+        $saleModel = new CreateSaleModel();
         $saleModel->customerId = intval( $request->input( 'customerId' ) );
         $saleModel->employeeId = intval( $request->input( 'employeeId' ) );
         $saleModel->productId = intval( $request->input( 'productId' ) );

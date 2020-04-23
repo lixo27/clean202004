@@ -66,9 +66,9 @@ class CreateSale implements CreateSaleInterface
     }
 
     /**
-     * @param \stdClass $model
+     * @param CreateSaleModel $model
      */
-    public function execute( \stdClass $model ): void
+    public function execute( CreateSaleModel $model ): void
     {
         $customer = $this->customerRepository->get( $model->customerId );
         $employee = $this->employeeRepository->get( $model->employeeId );
