@@ -38,6 +38,7 @@ class GetSaleList implements GetSaleListInterface
 
             $saleModel = new \stdClass();
             $saleModel->id = $sale->identity();
+            $saleModel->date = $sale->getDate();
             $saleModel->customerName = $sale->getCustomer()->getName();
             $saleModel->employeeName = $sale->getEmployee()->getName();
             $saleModel->productName = $sale->getProduct()->getName();

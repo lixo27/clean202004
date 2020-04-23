@@ -12,6 +12,7 @@
 
         <tr>
             <th scope="col">#</th>
+            <th scope="col">Date</th>
             <th scope="col">Customer</th>
             <th scope="col">Employee</th>
             <th scope="col">Product</th>
@@ -26,6 +27,7 @@
 
             <tr>
                 <td><a href="{{ route('sale.detail', ['id' => $sale->id]) }}">{{ $sale->id }}</a></td>
+                <td>{{ $sale->date }}</td>
                 <td>{{ $sale->customerName }}</td>
                 <td>{{ $sale->employeeName }}</td>
                 <td>{{ $sale->productName }}</td>
@@ -35,7 +37,7 @@
         @empty
 
             <tr>
-                <td colspan="5">Sorry, no sales</td>
+                <td colspan="6">Sorry, no sales</td>
             </tr>
 
         @endforelse

@@ -16,6 +16,11 @@
         </tr>
 
         <tr>
+            <th scope="row">Date</th>
+            <td>{{ $sale->date }}</td>
+        </tr>
+
+        <tr>
             <th scope="row">Customer</th>
             <td>{{ $sale->customerName }}</td>
         </tr>
