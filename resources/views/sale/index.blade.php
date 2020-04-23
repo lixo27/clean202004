@@ -46,4 +46,8 @@
 
     </table>
 
+    <div class="text-right">
+        <a class="btn btn-primary" href="{{ route('sale.create') }}">Create</a>
+    </div>
+
 @endsection

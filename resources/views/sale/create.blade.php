@@ -6,7 +6,7 @@
 
     <h1>Create Sale</h1>
 
-    <form method="post" action="{{ route('sale.store') }}">
+    <form class="border p-4" method="post" action="{{ route('sale.store') }}">
 
         <div class="form-group row">
             <label for="customerId" class="col-sm-2 col-form-label">Customer</label>
@@ -51,8 +51,8 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <div class="col-sm-10">
+        <div class="form-group row mb-0">
+            <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary">Create</button>
             </div>
         </div>
