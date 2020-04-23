@@ -12,6 +12,13 @@ use Illuminate\Support\Collection;
 interface ProductRepositoryInterface
 {
     /**
+     * @param int $identity
+     *
+     * @return ProductInterface
+     */
+    public function get( int $identity ): ProductInterface;
+    
+    /**
      * @return Collection
      */
     public function all(): Collection;

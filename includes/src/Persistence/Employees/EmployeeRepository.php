@@ -2,6 +2,7 @@
 
 namespace Clean\Persistence\Employees;
 
+use Clean\Domain\Employees\EmployeeInterface;
 use Clean\Domain\Employees\EmployeeModel;
 use Clean\Domain\Employees\EmployeeRepositoryInterface;
 use Illuminate\Support\Collection;
@@ -13,6 +14,16 @@ use Illuminate\Support\Collection;
  */
 class EmployeeRepository implements EmployeeRepositoryInterface
 {
+    /**
+     * @param int $identity
+     *
+     * @return EmployeeInterface
+     */
+    public function get( int $identity ): EmployeeInterface
+    {
+        return EmployeeModel::find( $identity );
+    }
+
     /**
      * @return Collection
      */

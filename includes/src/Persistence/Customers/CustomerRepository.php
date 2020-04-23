@@ -2,6 +2,7 @@
 
 namespace Clean\Persistence\Customers;
 
+use Clean\Domain\Customers\CustomerInterface;
 use Clean\Domain\Customers\CustomerModel;
 use Clean\Domain\Customers\CustomerRepositoryInterface;
 use Illuminate\Support\Collection;
@@ -13,6 +14,16 @@ use Illuminate\Support\Collection;
  */
 class CustomerRepository implements CustomerRepositoryInterface
 {
+    /**
+     * @param int $identity
+     *
+     * @return CustomerInterface
+     */
+    public function get( int $identity ): CustomerInterface
+    {
+        return CustomerModel::find( $identity );
+    }
+
     /**
      * @return Collection
      */

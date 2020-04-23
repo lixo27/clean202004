@@ -12,6 +12,13 @@ use Illuminate\Support\Collection;
 interface EmployeeRepositoryInterface
 {
     /**
+     * @param int $identity
+     *
+     * @return EmployeeInterface
+     */
+    public function get( int $identity ): EmployeeInterface;
+
+    /**
      * @return Collection
      */
     public function all(): Collection;

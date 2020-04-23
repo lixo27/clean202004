@@ -2,6 +2,7 @@
 
 namespace Clean\Persistence\Products;
 
+use Clean\Domain\Products\ProductInterface;
 use Clean\Domain\Products\ProductModel;
 use Clean\Domain\Products\ProductRepositoryInterface;
 use Illuminate\Support\Collection;
@@ -13,6 +14,16 @@ use Illuminate\Support\Collection;
  */
 class ProductRepository implements ProductRepositoryInterface
 {
+    /**
+     * @param int $identity
+     *
+     * @return ProductInterface
+     */
+    public function get( int $identity ): ProductInterface
+    {
+        return ProductModel::find( $identity );
+    }
+
     /**
      * @return Collection
      */
