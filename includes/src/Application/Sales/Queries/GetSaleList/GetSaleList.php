@@ -43,7 +43,7 @@ class GetSaleList implements GetSaleListInterface
             $saleModel->customerName = $sale->getCustomer()->getName();
             $saleModel->employeeName = $sale->getEmployee()->getName();
             $saleModel->productName = $sale->getProduct()->getName();
-            $saleModel->totalPrice = $sale->getTotalPrice()->getValue();
+            $saleModel->total = $sale->getTotalPrice()->getValue();
 
             return $saleModel;
 
