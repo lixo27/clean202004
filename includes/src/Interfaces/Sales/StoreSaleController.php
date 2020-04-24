@@ -3,7 +3,7 @@
 namespace Clean\Interfaces\Sales;
 
 use Clean\Application\Sales\Commands\CreateSale\CreateSaleInterface;
-use Clean\Application\Sales\Commands\CreateSale\CreateSaleModel;
+use Clean\Application\Sales\Commands\CreateSale\CreateSaleModelFactoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -20,23 +20,35 @@ class StoreSaleController extends Controller
     private $createSale;
 
     /**
+     * @var CreateSaleModelFactoryInterface
+     */
+    private $createSaleModelFactory;
+
+    /**
      * StoreSaleController constructor.
      *
-     * @param CreateSaleInterface $createSale
+     * @param CreateSaleInterface             $createSale
+     * @param CreateSaleModelFactoryInterface $createSaleModelFactory
      */
-    public function __construct( CreateSaleInterface $createSale )
+    public function __construct(
+        CreateSaleInterface $createSale,
+        CreateSaleModelFactoryInterface $createSaleModelFactory
+    )
     {
         $this->createSale = $createSale;
+        $this->createSaleModelFactory = $createSaleModelFactory;
     }
 
     public function __invoke( Request $request )
     {
-        $saleModel = new CreateSaleModel();
-        $saleModel->customerId = intval( $request->input( 'customerId' ) );
-        $saleModel->employeeId = intval( $request->input( 'employeeId' ) );
-        $saleModel->productId = intval( $request->input( 'productId' ) );
-        $saleModel->quantity = intval( $request->input( 'quantity' ) );
+        $validatedData = $request->validate( [
+            'customerId' => 'required',
+            'employeeId' => 'required',
+            'productId' => 'required',
+            'quantity' => 'required',
+        ] );
 
+        $saleModel = $this->createSaleModelFactory->createFromArray( $validatedData );
         $this->createSale->execute( $saleModel );
 
         return redirect()->route( 'sale.index' );

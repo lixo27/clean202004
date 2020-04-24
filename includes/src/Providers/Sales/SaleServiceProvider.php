@@ -4,6 +4,8 @@ namespace Clean\Providers\Sales;
 
 use Clean\Application\Sales\Commands\CreateSale\CreateSale;
 use Clean\Application\Sales\Commands\CreateSale\CreateSaleInterface;
+use Clean\Application\Sales\Commands\CreateSale\CreateSaleModelFactory;
+use Clean\Application\Sales\Commands\CreateSale\CreateSaleModelFactoryInterface;
 use Clean\Application\Sales\Queries\GetSaleDetail\GetSaleDetail;
 use Clean\Application\Sales\Queries\GetSaleDetail\GetSaleDetailInterface;
 use Clean\Application\Sales\Queries\GetSaleList\GetSaleList;
@@ -25,6 +27,7 @@ class SaleServiceProvider extends ServiceProvider
 {
     public $singletons = [
         CreateSaleInterface::class => CreateSale::class,
+        CreateSaleModelFactoryInterface::class => CreateSaleModelFactory::class,
         GetSaleDetailInterface::class => GetSaleDetail::class,
         GetSaleListInterface::class => GetSaleList::class,
         SaleFactoryInterface::class => SaleFactory::class,
