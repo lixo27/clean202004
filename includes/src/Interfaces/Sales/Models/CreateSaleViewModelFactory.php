@@ -78,7 +78,7 @@ class CreateSaleViewModelFactory implements CreateSaleViewModelFactoryInterface
                 'value' => $product->id,
                 'text' => vsprintf( '%1$s (%2$s)', [
                     $product->name,
-                    money_format( '%.2n', $product->price ),
+                    ( new \NumberFormatter( 'en-US', \NumberFormatter::CURRENCY ) )->format( $product->price ),
                 ] ),
             ];
         } );

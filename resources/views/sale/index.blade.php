@@ -31,7 +31,7 @@
                 <td>{{ $sale->customerName }}</td>
                 <td>{{ $sale->employeeName }}</td>
                 <td>{{ $sale->productName }}</td>
-                <td>{{ money_format('%.2n', $sale->total ) }}</td>
+                <td>{{ (new \NumberFormatter('en-US', \NumberFormatter::CURRENCY))->format( $sale->total ) }}</td>
             </tr>
 
         @empty

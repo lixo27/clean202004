@@ -25,7 +25,7 @@
             <tr>
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
-                <td>{{ money_format('%.2n', $product->price )}}</td>
+                <td>{{ (new \NumberFormatter('en-US', \NumberFormatter::CURRENCY))->format( $product->price ) }}</td>
             </tr>
 
         @empty
