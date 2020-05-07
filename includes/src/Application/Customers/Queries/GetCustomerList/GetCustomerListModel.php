@@ -2,7 +2,7 @@
 
 namespace Clean\Application\Customers\Queries\GetCustomerList;
 
-class GetCustomerModel
+class GetCustomerListModel
 {
     /**
      * @var int
