@@ -2,6 +2,7 @@
 
 namespace Clean\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -21,5 +22,9 @@ class CleanServiceProvider extends ServiceProvider
         $this->publishes( [
             dirname( __DIR__, 3 ) . '/resources/css' => public_path( 'vendor/clean/css' ),
         ], 'clean-public' );
+
+        Blade::directive( 'money', function ( $expression ) {
+            return "<?= (new \NumberFormatter('en-US', \NumberFormatter::CURRENCY))->format( $expression ); ?>";
+        } );
     }
 }

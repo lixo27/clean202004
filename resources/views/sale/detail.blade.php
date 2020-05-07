@@ -37,7 +37,7 @@
 
         <tr>
             <th scope="row">Total</th>
-            <td>{{ (new \NumberFormatter('en-US', \NumberFormatter::CURRENCY))->format( $sale->total ) }}</td>
+            <td>@money( $sale->total )</td>
         </tr>
 
         </tbody>
