@@ -36,7 +36,7 @@ class GetCustomerList implements GetCustomerListInterface
         $customers = $this->customerRepsitory->all();
         return $customers->map( function ( CustomerInterface $customer ) {
 
-            $customerModel = new \stdClass();
+            $customerModel = new GetCustomerModel();
             $customerModel->id = $customer->identity();
             $customerModel->name = $customer->getName();
 
