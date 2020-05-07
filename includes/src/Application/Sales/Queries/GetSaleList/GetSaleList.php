@@ -36,7 +36,7 @@ class GetSaleList implements GetSaleListInterface
         $sales = $this->saleRepository->all();
         return $sales->map( function ( SaleInterface $sale ) {
 
-            $saleModel = new \stdClass();
+            $saleModel = new GetSaleListModel();
             $saleModel->id = $sale->identity();
             $saleModel->date = $sale->getDate();
             $saleModel->customerName = $sale->getCustomer()->getName();
