@@ -36,7 +36,7 @@ class GetEmployeeList implements GetEmployeeListInterface
         $employees = $this->employeeRepository->all();
         return $employees->map( function ( EmployeeInterface $employee ) {
 
-            $employeeModel = new \stdClass();
+            $employeeModel = new GetEmployeeListModel();
             $employeeModel->id = $employee->identity();
             $employeeModel->name = $employee->getName();
 
