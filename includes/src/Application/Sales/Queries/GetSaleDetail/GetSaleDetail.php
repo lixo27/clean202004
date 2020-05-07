@@ -29,13 +29,13 @@ class GetSaleDetail implements GetSaleDetailInterface
     /**
      * @param int $identity
      *
-     * @return \stdClass
+     * @return GetSaleDetailModel
      */
-    public function execute( int $identity ): \stdClass
+    public function execute( int $identity ): GetSaleDetailModel
     {
         $sale = $this->saleRepository->get( $identity );
 
-        $saleModel = new \stdClass();
+        $saleModel = new GetSaleDetailModel();
         $saleModel->id = $sale->identity();
         $saleModel->date = $sale->getDate();
         $saleModel->customerName = $sale->getCustomer()->getName();

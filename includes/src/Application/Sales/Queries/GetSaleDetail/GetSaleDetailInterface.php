@@ -12,7 +12,7 @@ interface GetSaleDetailInterface
     /**
      * @param int $identity
      *
-     * @return \stdClass
+     * @return GetSaleDetailModel
      */
-    public function execute( int $identity ): \stdClass;
+    public function execute( int $identity ): GetSaleDetailModel;
 }
