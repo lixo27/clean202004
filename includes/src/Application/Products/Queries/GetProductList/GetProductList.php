@@ -36,7 +36,7 @@ class GetProductList implements GetProductListInterface
         $products = $this->productRepository->all();
         return $products->map( function ( ProductInterface $product ) {
 
-            $productModel = new \stdClass();
+            $productModel = new GetProductListModel();
             $productModel->id = $product->identity();
             $productModel->name = $product->getName();
             $productModel->price = $product->getPrice();
